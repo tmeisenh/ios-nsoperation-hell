@@ -48,8 +48,6 @@
     [super cancel];
     [_call addObject:@"cancel"];
     if (self.isReady && !self.isExecuting && !self.isFinished) {
-        [self transitionToStartedState];
-        [self transitionToFinishedState];
         NSLog(@"################################### Cancel w/o starting %p", self);
         /* transitionToStartedState fixes: went isFinished=YES without being started by the queue it is in */
 //        [self transitionToStartedState];
