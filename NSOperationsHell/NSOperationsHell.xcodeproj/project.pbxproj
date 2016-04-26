@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1FB6B01B1CCEDE30006B7ECB /* NSOperationsHell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB6B0101CCEDE30006B7ECB /* NSOperationsHell.framework */; };
+		1FB6B0301CCEDE9D006B7ECB /* AsyncOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB6B02E1CCEDE9D006B7ECB /* AsyncOperation.h */; };
+		1FB6B0311CCEDE9D006B7ECB /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B02F1CCEDE9D006B7ECB /* AsyncOperation.m */; };
+		1FB6B0341CCEDF6F006B7ECB /* SleepingAsyncOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB6B0321CCEDF6F006B7ECB /* SleepingAsyncOperation.h */; };
+		1FB6B0351CCEDF6F006B7ECB /* SleepingAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B0331CCEDF6F006B7ECB /* SleepingAsyncOperation.m */; };
+		1FB6B03B1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B03A1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +30,11 @@
 		1FB6B0151CCEDE30006B7ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB6B01A1CCEDE30006B7ECB /* NSOperationsHellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSOperationsHellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB6B0211CCEDE30006B7ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB6B02E1CCEDE9D006B7ECB /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncOperation.h; sourceTree = "<group>"; };
+		1FB6B02F1CCEDE9D006B7ECB /* AsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperation.m; sourceTree = "<group>"; };
+		1FB6B0321CCEDF6F006B7ECB /* SleepingAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepingAsyncOperation.h; sourceTree = "<group>"; };
+		1FB6B0331CCEDF6F006B7ECB /* SleepingAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepingAsyncOperation.m; sourceTree = "<group>"; };
+		1FB6B03A1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperationIntegrationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				1FB6B0151CCEDE30006B7ECB /* Info.plist */,
+				1FB6B02E1CCEDE9D006B7ECB /* AsyncOperation.h */,
+				1FB6B02F1CCEDE9D006B7ECB /* AsyncOperation.m */,
+				1FB6B0321CCEDF6F006B7ECB /* SleepingAsyncOperation.h */,
+				1FB6B0331CCEDF6F006B7ECB /* SleepingAsyncOperation.m */,
+				1FB6B03A1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m */,
 			);
 			path = NSOperationsHell;
 			sourceTree = "<group>";
@@ -87,6 +102,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6B0341CCEDF6F006B7ECB /* SleepingAsyncOperation.h in Headers */,
+				1FB6B0301CCEDE9D006B7ECB /* AsyncOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6B0311CCEDE9D006B7ECB /* AsyncOperation.m in Sources */,
+				1FB6B0351CCEDF6F006B7ECB /* SleepingAsyncOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6B03B1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
