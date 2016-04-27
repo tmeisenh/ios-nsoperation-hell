@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5C4D261CD0443F006EC7D8 /* RepeatingTimerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5C4D241CD0443F006EC7D8 /* RepeatingTimerOperation.h */; };
+		1F5C4D271CD0443F006EC7D8 /* RepeatingTimerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5C4D251CD0443F006EC7D8 /* RepeatingTimerOperation.m */; };
 		1FB6B01B1CCEDE30006B7ECB /* NSOperationsHell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB6B0101CCEDE30006B7ECB /* NSOperationsHell.framework */; };
 		1FB6B0301CCEDE9D006B7ECB /* AsyncOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB6B02E1CCEDE9D006B7ECB /* AsyncOperation.h */; };
 		1FB6B0311CCEDE9D006B7ECB /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B02F1CCEDE9D006B7ECB /* AsyncOperation.m */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F5C4D241CD0443F006EC7D8 /* RepeatingTimerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatingTimerOperation.h; sourceTree = "<group>"; };
+		1F5C4D251CD0443F006EC7D8 /* RepeatingTimerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatingTimerOperation.m; sourceTree = "<group>"; };
 		1FB6B0101CCEDE30006B7ECB /* NSOperationsHell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSOperationsHell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB6B0151CCEDE30006B7ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB6B01A1CCEDE30006B7ECB /* NSOperationsHellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSOperationsHellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,8 @@
 				1FB6B0321CCEDF6F006B7ECB /* SleepingAsyncOperation.h */,
 				1FB6B0331CCEDF6F006B7ECB /* SleepingAsyncOperation.m */,
 				1FB6B03A1CCEDFE3006B7ECB /* AsyncOperationIntegrationTests.m */,
+				1F5C4D241CD0443F006EC7D8 /* RepeatingTimerOperation.h */,
+				1F5C4D251CD0443F006EC7D8 /* RepeatingTimerOperation.m */,
 			);
 			path = NSOperationsHell;
 			sourceTree = "<group>";
@@ -104,6 +110,7 @@
 			files = (
 				1FB6B0341CCEDF6F006B7ECB /* SleepingAsyncOperation.h in Headers */,
 				1FB6B0301CCEDE9D006B7ECB /* AsyncOperation.h in Headers */,
+				1F5C4D261CD0443F006EC7D8 /* RepeatingTimerOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 			files = (
 				1FB6B0311CCEDE9D006B7ECB /* AsyncOperation.m in Sources */,
 				1FB6B0351CCEDF6F006B7ECB /* SleepingAsyncOperation.m in Sources */,
+				1F5C4D271CD0443F006EC7D8 /* RepeatingTimerOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +398,7 @@
 				1FB6B0261CCEDE30006B7ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FB6B0271CCEDE30006B7ECB /* Build configuration list for PBXNativeTarget "NSOperationsHellTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +407,7 @@
 				1FB6B0291CCEDE30006B7ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

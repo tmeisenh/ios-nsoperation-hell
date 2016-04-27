@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 
 #import "SleepingAsyncOperation.h"
+#import "RepeatingTimerOperation.h"
 
 @interface AsyncOperationIntegrationTests : XCTestCase
 
@@ -18,11 +19,16 @@
     self.queue.suspended = YES;
 }
 
+- (NSOperation *)testOperation {
+    return [[RepeatingTimerOperation alloc] init];
+//    return [[SleepingAsyncOperation alloc] init];
+}
+
 - (void)testWhenAddingOperationsToSuspendedQueue_WhenCancelAll_AndUnsuspendQueue_ThenDoesNotCrash {
     
     self.queue.suspended = YES;
     for (int i = 0; i < 100; i++) {
-        SleepingAsyncOperation *op = [[SleepingAsyncOperation alloc] init];
+        NSOperation *op = [self testOperation];
         [self.queue addOperation:op];
     }
     
@@ -34,12 +40,11 @@
 }
 
 
-// This periodically crashes
 - (void)testWhenAddingOperationsToLiveQueue_WhenCancelAll_ThenDoesNotCrash {
     
     self.queue.suspended = NO;
     for (int i = 0; i < 100; i++) {
-        SleepingAsyncOperation *op = [[SleepingAsyncOperation alloc] init];
+        NSOperation *op = [self testOperation];
         [self.queue addOperation:op];
     }
     
@@ -49,11 +54,10 @@
     XCTAssertEqual(0, self.queue.operationCount);
 }
 
-// This periodically crashes
 - (void)testWhenAddingOperationsToSuspendedQueue_ThatBecomesLiveWhileAddingOperations_WhenCancelAll_ThenDoesNotCrash {
     
     for (int i = 0; i < 100; i++) {
-        SleepingAsyncOperation *op = [[SleepingAsyncOperation alloc] init];
+        NSOperation *op = [self testOperation];
         if (i % 7 == 0) {
             self.queue.suspended = NO;
         }
@@ -66,13 +70,12 @@
     XCTAssertEqual(0, self.queue.operationCount);
 }
 
-// This periodically crashes
 - (void)testAddingOperationsToLiveQueue_AndPeriodicallyCancelingAllOperations_ThenDoesNotCrash {
     self.queue.suspended = NO;
     
     for (int i = 0; i < 50; i++) {
         for (int k = 0; k < 50; k++) {
-            SleepingAsyncOperation *op = [[SleepingAsyncOperation alloc] init];
+            NSOperation *op = [self testOperation];
             [self.queue addOperation:op];
         }
         [self.queue cancelAllOperations];
