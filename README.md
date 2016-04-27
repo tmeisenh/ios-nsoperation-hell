@@ -11,6 +11,7 @@ This is an example project that demonstates concurrent/asynchronous NSOperations
 ### about this code base
 - AsyncOperation handles the KVO eventing for the two state transitions that I _think_ we care about: executing and finishing.
 - SleepingAsyncOperation is an operation that manages its own internal state.  If the operation gets to actually execute it just sleeps the thread for a second. (Note: If the operation is cancelled while executing then it is allowed to finish).
+- RepeatingTimerOperation is an operation that just observes events from an NSTimer.  It never finishes.  This is heavily commented around operation lifecycle and how to respond to events like cancel.
 - AsyncOperationIntegrationTests - a series of tests around adding operations to a suspended or live NSOperationQueue.
 
 The Apple Class Reference states that the isAsynchronous (and isConcurrent, I suppose) property is ignored when the operation is execuited within an NSOperationQueue.  It does state that you are still responsible for the managing the state machine of the NSOperation by setting and posting KVO events that signal when isExecuting and isFinished change.
